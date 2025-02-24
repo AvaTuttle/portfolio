@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section id="about">
+    <div class="hero-container">
+        <img src="{%static '/img/Snapchat-1638545848(1).jpg' %}" alt="My Portrait">
+        <div class="intro">
+            <h1>Hi! I'm Ava</h1>
+            <h2>Entry Level Web Developer</h2>
+            <p>I am an entry level web developer, with a focus on front end, but experience with fullstack development. 
+                I do my best to make interesting and engaging web pages that are fun
+                to look at and interact with, while not being cluttered or excessive, 
+                and also keeping it as easy to use as I can. I enjoy working with
+                HTML, CSS, and JavaScript, prefering that work over anything backend.</p>
+        </div>
+    </div>
+    <div class="github-button">
+        <a href="https://github.com/AvaTuttle?tab=repositories" class="btn">GitHub</a>
+    </div>
+</section>
+
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Django</span>
+        <span class="skill">React</span>
+        <span class="skill">Flask</span>
+    </div>
+</section>
+
+{% endblock content %}

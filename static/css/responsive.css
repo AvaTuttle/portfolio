@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(20, 20, 50, 0.8);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container h2 {
+    color: #ff66b2;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: #ff66b2;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background: #ff66b2;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(20, 20, 50, 0.95);
+        border-radius: 8px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    header nav a {
+        display: block;
+        padding: 12px;
+        font-size: 1rem;
+        color: #e0e0e0;
+    }
+
+    header nav a:hover {
+        background: rgba(255, 102, 178, 0.2);
+        color: #ff66b2;
+    }
+
+    .menu-checkbox:checked ~ nav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hamburger-menu {
+        width: 25px;
+        height: 20px;
+    }
+
+    .bar {
+        height: 3px;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+

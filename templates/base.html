@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/base.css' %}">
+    <link rel="stylesheet" href="{% static './css/responsive.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#"><h2>Ava Tuttle</h2></a>
+        </div>
+    
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    
+        <label for="menu-toggle" class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+    
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#project_list">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>
