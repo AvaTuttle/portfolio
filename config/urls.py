@@ -21,6 +21,6 @@ from pages import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("first_view", views.my_first_view, name="first_view"),
-    path("", include('pages.urls')),
+    path("", include("pages.urls")),
     path("content/",include("content.urls")),
 ]
