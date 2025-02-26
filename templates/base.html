@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static './css/base.css' %}">
-    <link rel="stylesheet" href="{% static './css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -26,8 +26,8 @@
         <nav>
             <a href="{% url 'about' %}">About Me</a>
             <a href="{% url 'project_list' %}">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+            <a href="#">Experience</a>
+            <a href="{% url 'contact' %}">Contact</a>
         </nav>
     </header>
     

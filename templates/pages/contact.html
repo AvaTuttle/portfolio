@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section class="contact-section center-row">
+
+    <h1>Contact me</h1>
+    <h2>please fill out the form below</h2>
+
+    <form method="post" class="center-collumn">
+        {% csrf_token %}
+
+        <div class="field">
+            <label>Name</label>
+            {{ form.name }}
+        </div>
+        <div class="field">
+            <label>Email</label>
+            {{ form.email }}
+        </div>
+        <div class="field">
+            <label>Message</label>
+            {{ form.message }}
+        </div>
+
+        <div class="field">
+            <button>Send Message</button>
+        </div>
+
+    </form>
+</section>
+
+
+
+{% endblock content %}
