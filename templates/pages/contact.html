@@ -2,34 +2,35 @@
 
 {% load static %}
 {% block content %}
-<section class="contact-section center-row">
+<section class="contact-page">
 
-    <h1>Contact me</h1>
-    <h2>please fill out the form below</h2>
+    <div class="contact-header">
+        <h1>Contact Me</h1>
+        <h2>Please fill out the form below</h2>
+    </div>
 
-    <form method="post" class="center-collumn">
+    <form method="post" class="contact-form">
         {% csrf_token %}
 
-        <div class="field">
-            <label>Name</label>
+        <div class="form-field">
+            <label for="{{ form.name.id_for_label }}">Name</label>
             {{ form.name }}
         </div>
-        <div class="field">
-            <label>Email</label>
+
+        <div class="form-field">
+            <label for="{{ form.email.id_for_label }}">Email</label>
             {{ form.email }}
         </div>
-        <div class="field">
-            <label>Message</label>
+
+        <div class="form-field">
+            <label for="{{ form.message.id_for_label }}">Message</label>
             {{ form.message }}
         </div>
 
-        <div class="field">
-            <button>Send Message</button>
+        <div class="form-submit">
+            <button type="submit">Send Message</button>
         </div>
-
     </form>
+
 </section>
-
-
-
 {% endblock content %}
